@@ -1,0 +1,467 @@
+/*-and last but not least, the HMTL tags will be added to bottom, if specificity is right, we are goign in descendent order-
+remember that this thing apply styles in the order presented*/
+
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+/*first ones will always be the ID, for better code understanding*/
+
+#navbar {
+    text-align: right;
+}
+
+#navbar p {
+    display: inline-block;
+    position: relative;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    /*text-align: right;*/
+    /*display: inline-block;*/
+    padding-top:10px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+#navbar a {
+    display: inline-block;
+    position: relative;
+    /*text-align: right;*/
+    text-decoration: none;
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#navbar table {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 2px;
+}
+
+#navbar a:hover {
+    display: inline-block;
+    position: relative;
+    /*text-align: right;*/
+    text-decoration: underline;
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navbaricon {
+    display: inline-block;
+    position: relative;
+    opacity: .60;
+    height: 23px;
+    width: 23px;
+}
+
+.navbarbutton {
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+    color: #ffffff;
+    background-color: rgb(67, 135, 253);
+    /*border-radius: 10px;*/
+    border: 1px solid #4285f4;
+    padding: 4px 16px 4px 16px;
+    margin: auto;
+}
+
+.navbarbutton:hover {
+    box-shadow: 1px 1px 4px #dadada;
+}
+
+#logo {
+    padding-top: 137px;
+}
+
+#logo img {
+    display: block;
+    margin: auto;
+}
+
+#searchbar { /*this ID has the style of the search bar, in ordeer to add icons, the input below must have border: none;*/
+    overflow: auto;
+    /*position: absolute;*/
+    border: 1px;
+    border-style: solid;
+    border-color: #d6d6d6;
+    border-radius: 24px;
+    text-align: center; /*all elements inside this div, must be put into inline-block display in order for this to work*/
+    margin: 30px auto 30px auto;
+    width: 550px;
+}
+
+#searchbar:focus-within { /*use focus-within when you have to give click to something, and the action must persist, like in a input, where keyboard cursor stays for prolonged period of time*/
+    border-bottom-style: hidden;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.searchbarshadow:hover {
+    box-shadow: 1px 0px 8px -1px #dcdcdc;
+}
+
+.searchbarshadow:focus-within {
+    border-bottom: none;
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline: none;
+}
+
+.searchbarinputiconsearch {
+    float: left;
+    height: 16px; /*this value change the full size of the icon, not just the height*/
+    opacity: .5;
+    margin-top: 15px;
+    margin-left: 17px;
+}
+
+.searchbarinput {
+    display: inline-block;
+    border: none;
+    outline: none; /*this eliminete the annoying frame browser put in all the inputs of this type*/
+    box-shadow: none;
+    padding: 0px 0px 0px 10px; /*this padding it is for the internal part of the input, remember the order of the paddings up, right, bottom, left*/
+    /*align-items: center;*/
+    width: 465px;
+    height: 46px;
+}
+
+.searchbarinputiconvoicesearch {
+    float: right;
+    height: 20px; /*this value change the full size of the icon, not just the height*/
+    margin-top: 13px;
+    margin-right: 17px;
+}
+
+/* .searchbarselect {
+    display: inline-block;
+    border: none;
+    outline: none; /*this eliminete the annoying frame browser put in all the inputs of this type*//*
+    box-shadow: none;
+    padding: 0px 0px 0px 10px; /*this padding it is for the internal part of the input, remember the order of the paddings up, right, bottom, left*//*
+    align-items: center;
+    width: 465px;
+    height: 46px;
+} */
+
+#searchbardropdown { /*this ID has the style of the search bar dropdown menu, in order to add icons, the input below must have border: none;*/
+    overflow: auto;
+    border-top: none;
+    border: 1px;
+    border-style: solid;
+    border-color: #d6d6d6;
+    border-radius: 0px 0px 24px 24px;
+    text-align: center; /*all elements inside this ddiv, must be put into inline-block display in order for this to work*/
+    margin: 0px auto 30px auto;
+    width: 550px;
+}
+
+.searchbardropdowncontent { /*this hide the content when no pseudoclass is used*/
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-top-style: hidden;
+    min-width: 550px; /*before it was 165px*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.searchbardropdowncontenticonclock {
+    display: block;
+    position: absolute;
+    float: left; /*you must use block in order to be recognized, any other display gets ignored*/
+    height: 16px; /*this value change the full size of the icon, not just the height*/
+    opacity: .4;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    margin-left: 17px;
+}
+
+/*content copied from W3Schools starts here*/
+
+.searchbardropdowncontent p { /*stylize the links inside the div that will act as a dropdown menu, but it just a div with a bunch of links*/
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    padding-top: 1px;
+    padding-right: 25px;
+    padding-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.searchbardropdowncontent p:first-child { /*stylize the links inside the div that will act as a dropdown menu, but it just a div with a bunch of links*/
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    padding-top: 1px;
+    padding-right: 25px;
+    padding-bottom: 1px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+
+.searchbardropdowncontentsearch { /*stylize the links inside the div that will act as a dropdown menu, but it just a div with a bunch of links*/
+    display: block;
+    position: relative;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    color: #52188c;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-align: left;
+    width: 500px;
+    margin-left: 39px;
+}
+
+.searchbardropdowncontentremove {
+    display: block;
+    position: relative;
+    font-size: 13px;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 17px;
+    /* padding-top: 5px; */  /*this will make the element, to be added padding to top, wich will make it look like it is uncentered*/
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-align: left;
+    text-decoration: none;
+}
+
+/*this content is not copied from W3Schools, starts here*/ 
+
+/*.searchbardropdowncontentlink {
+    color: #52188c;
+}*/
+
+.searchbardropdowncontentremove {
+    float: right;
+    color: rgb(146, 146, 146);
+}
+
+.searchbardropdowncontentremove:hover {
+    color: rgb(58, 121, 216);
+    text-decoration: underline;
+}
+
+/*this content is not copied from W3Schools, ends here*/ 
+
+.searchbardropdowncontent p:hover { /*change color of the background links when you hover over them*/
+    background-color: rgb(214, 214, 214)
+}
+
+#searchbar:focus-within .searchbardropdowncontent { /*this says that when you give click into the elment (using focus-within) with ID #searcbar, must show the class that contains the hidden elements*/
+    display: block;
+}
+
+/*copied content from W3Schools ends here*/
+
+#buttonsinside {
+    /* text-align: center; */
+    margin: 20px 0px 30px 0px;
+    background-color: transparent; /*use transparent, as a none color, in order to delete anything the outside div of the HTML is doing to this part of the code, you are AWESOME! keep going, never surrender*/
+    width: 550px;
+}
+
+#buttonsinside p {
+    display: inline-block;
+    background-color: transparent;
+    position: relative;
+    padding: 0%; /*we have to addd this padding, if not, the parent will decide the padding this element will have*/
+    margin: auto; /*this will adjut the entire buttons to the inline-block size, deleting this, will make the buttons huge*/
+}
+
+#buttonsinside button{
+    outline: none;
+}
+
+.buttonsis {
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    /*text-align: center;*/
+    color: #646464;
+    background-color: #ededed;
+    border-radius: 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: #ededed;
+    padding: 8px 16px 8px 16px;
+    margin: 0px 5px 0px 5px;
+}
+
+.buttonsis:hover {
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    /*text-align: center;*/
+    color: #292929;
+    background-color: #ededed;
+    box-shadow: rgba(0, 0, 0, .15);
+    border: 1px;
+    border-radius: 5px;
+    border-style:solid;
+    border-color: rgba(92, 92, 92, .20);
+    padding: 8px 16px 8px 16px;
+    margin: 0px 5px 0px 5px;
+}
+
+#buttonsoutside {
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+}
+
+#buttonsoutside p {
+    display: inline-block;
+    position: relative;
+    margin: auto; /*this will adjut the entire buttons to the inline-block size, deleting this, will make the buttons huge*/
+}
+
+#buttonsoutside button{
+    outline: none;
+}
+
+.buttonsos {
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    /*text-align: center;*/
+    color: #646464;
+    background-color: #ededed;
+    border-radius: 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: #ededed;
+    padding: 8px 16px 8px 16px;
+    margin: 0px 5px 0px 5px;
+}
+
+.buttonsos:hover {
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    /*text-align: center;*/
+    color: #292929;
+    background-color: #ededed;
+    box-shadow: rgba(0, 0, 0, .15);
+    border: 1px;
+    border-radius: 5px;
+    border-style:solid;
+    border-color: rgba(92, 92, 92, .20);
+    padding: 8px 16px 8px 16px;
+    margin: 0px 5px 0px 5px;
+}
+
+#languages {
+    margin: 30px 0px 30px 0px;
+}
+
+#languages p { /*if the element is no added a mixed ID/class, will interfere with any other p element, be carefull*/
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    text-align: center;
+    /*display: inline-block;*/
+}
+
+#languages a {
+    text-align: right;
+    text-decoration: none;
+    color: navy;
+}
+
+#country {
+    display: block;
+    position: fixed;
+    float: left;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    color: #646464;
+    background-color: #ededed;
+    border-top: #d3d3d3;
+    border-top-style: solid;
+    border-top-width: 1px;
+    /*padding-top:17px;*/
+    padding-right: 20px;
+    padding-left: 20px;
+    /*padding-bottom:17px;*/
+    bottom: 41px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#country p {
+    float: left;
+    padding-right: 17px;
+    padding-left: 27px;
+}
+
+#footer {
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    color: #646464;
+    background-color: #ededed;
+    border-top: #d3d3d3;
+    border-top-style: solid;
+    border-top-width: 1px;
+    /*display: inline-block;*/
+    /*padding-top:17px;*/
+    padding-right: 20px;
+    padding-left: 20px;
+    /*padding-bottom:17px;*/
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#footer p {
+    /*position: static;*/
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    line-height: 40px; /*this is the tallness of the paragragh element*/
+    color: #646464;
+    background-color: #ededed;
+    /*display: inline-block;*/
+    /*padding-top:17px;*/
+    padding-right: 17px;
+    padding-left: 27px;
+    /*padding-bottom:17px;*/
+    margin: 0px;
+}
+
+#footer a {
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    vertical-align: middle;
+    text-align: right;
+    text-decoration: none;
+    color: #6e6e6e;
+    margin-right: 16px;
+}
+
+.footerleft {
+    float: left;
+}
+
+.footerright {
+    position: relative;
+    float: right;
+}

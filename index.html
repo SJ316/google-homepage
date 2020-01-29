@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Google</title>
+        <link rel="stylesheet" type="text/css" href="css/style_index.css" hreflang="en-us">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    </head>
+
+    <body>
+
+        <div id="navbar">
+            <p>
+                <a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a>
+                <a href="https://www.google.com.sv/imghp?hl=en&tab=wi&ogbl">Images</a>
+                <table>
+                    <td>
+                        <img class="navbaricon" src="assets/images/appsicon.png">
+                    </td>
+                </table>
+                    <p><button class="navbarbutton"><strong>Log in</strong></button></p>
+                <!--<form class="navbarbutton">
+                    <input type="submit" value="Log in">
+                </form>-->
+            </p>
+        </div>
+
+        <div id="logo">
+            <img src="assets/images/googlelogo_color_272x92dp.png" alt="Google">
+        </div>
+
+        <div id="searchbar" class="searchbarshadow">
+            <form autocomplete="off">
+                <a href="#"> <img class="searchbarinputiconsearch" src="assets/images/iconsearch.png"></a>
+                <input title="Search" class="searchbarinput" type="text" name="search">
+                <a href="#"> <img class="searchbarinputiconvoicesearch" src="assets/images/voicesearch.png" title="Search by Voice"></a>
+            </form>
+            <div id="searchbardropdown" class="searchbardropdowncontent"> <!--the <a.srch> in this part, make it a different element, if you remove it, you have to change the CSS since the next <a> element, will be down of where it should be-->
+                <p><img class="searchbardropdowncontenticonclock" src="assets/images/clockicon.png"><a.srch class="searchbardropdowncontentsearch" href="#">life is awesome</a><a class="searchbardropdowncontentremove" href="#">Remove</a></p>
+                <p><img class="searchbardropdowncontenticonclock" src="assets/images/clockicon.png"><a.srch class="searchbardropdowncontentsearch" href="#">stackoverflow "this is my problem that i know it will be fixed"</a><a class="searchbardropdowncontentremove" href="#">Remove</a></p>
+                <p><img class="searchbardropdowncontenticonclock" src="assets/images/clockicon.png"><a.srch class="searchbardropdowncontentsearch" href="#">stories from bad programmers that became good ones</a><a class="searchbardropdowncontentremove" href="#">Remove</a></p>
+                <p><img class="searchbardropdowncontenticonclock" src="assets/images/clockicon.png"><a.srch class="searchbardropdowncontentsearch" href="#">quotes about programming</a><a class="searchbardropdowncontentremove" href="#">Remove</a></p>
+                <p><img class="searchbardropdowncontenticonclock" src="assets/images/clockicon.png"><a.srch class="searchbardropdowncontentsearch" href="#">motivational videos</a><a class="searchbardropdowncontentremove" href="#">Remove</a></p>
+                <p><img class="searchbardropdowncontenticonclock" src="assets/images/clockicon.png"><a.srch class="searchbardropdowncontentsearch" href="#">will I ever be a good programmer</a><a class="searchbardropdowncontentremove" href="#">Remove</a></p>
+                <p><img class="searchbardropdowncontenticonclock" src="assets/images/clockicon.png"><a.srch class="searchbardropdowncontentsearch" href="#">how to hack my brain to learn html</a><a class="searchbardropdowncontentremove" href="#">Remove</a></p>
+                    <div id="buttonsinside">
+                        <form>
+                            <!--<p><button class="buttonsis" onclick="location.href'/OdinProjekt/cloned-projects/google-homepage/results.html'" type="button">Google Search</button></p>-->
+                            <p><button formaction="/OdinProjekt/cloned-projects/google-homepage/results.html" class="buttonsis">Google Search</button></p>
+                            <p><button class="buttonsis">I'm feeling lucky</button></p>
+                        </form>
+                    </div>
+            </div>
+        </div>
+
+        <div id="buttonsoutside">
+            <form>
+                <p><button formaction="/OdinProjekt/cloned-projects/google-homepage/results.html" class="buttonsos">Google Search</button></p>
+                <p><button class="buttonsos">I'm feeling lucky</button></p>
+            </form>
+        </div>
+
+        <div id="languages">
+            <p>Google offered in: <a hreg="https://www.google.com.sv">Espa&#241;ol (Latinoam&eacute;rica)</a></p>
+        </div>
+
+        <div id="country">
+            <p>United States</p>
+        </div>
+
+        <div id="footer">
+            <p class="footerleft">
+                <a href="https://www.google.com/intl/en_sv/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                <a href="https://about.google/?utm_source=google-SV&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
+            </p>
+            <p class="footerright">
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiJ64i4jYPnAhXFepoKHeGQD9gQ8awCCA4&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Ffg%3D1&usg=AOvVaw12z8DS9cd-g0Aokit_wxri">Privacy</a>
+                <a href="https://policies.google.com/terms?fg=1">Terms</a>
+                <a href="https://www.google.com/preferences?hl=en">Settings</a>
+            </p>
+        </div>
+
+        <!--TODO--->
+
+        <!--<script type="text/javascript">
+        onclick="myHide(); myFunction();" //this line goes where you want the below code to work, the below code has not been fixed to work
+        function myHide() {
+            var x = document.getElementById("buttons");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
+
+        /* when the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+        document.getElementById("searchbardropdowncontent").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.searchbarinput')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>-->
+    </body>
+
+</html>
